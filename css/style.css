@@ -15,12 +15,11 @@ body{
     min-height: 100vh;
     display: grid;
     grid-template-rows:  auto 1fr auto;
-    padding: 2rem .5rem;
+    padding: 2rem 1rem;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
     overflow-x: hidden;
 }
-
 
 img{
     width: 100%;
@@ -57,8 +56,7 @@ header .top-container{
 header .adress > div{
     display:grid;
     grid-template-columns: 1fr 5fr;
-    line-height: 22px;
-    
+    padding: .2rem 0;
 }
 
 
@@ -66,39 +64,24 @@ header .adress > div{
 header .name{
     font-weight: 600;
     font-size: 1.2rem;
-    line-height: 29px;
-
+    padding: .3rem 0;
     color: #4F4F4F;
 }
 header .post{
     font-weight: 500;
     font-size: .9rem;
-    line-height: 22px;
     color: #828282;
     margin-bottom: 1rem;
 }
 header .bottom-container{
     font-size: .9rem;
-    line-height: 22px;
+    line-height: 1.4;
     color: #828282;
 }
-@media all and (min-width : 768px){
-    header{
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 1.5rem;
-    }
-    header .img{
-        margin-bottom: 0; 
-      
-    }
-}
-
 
 main{
     display: grid;
     gap: 1rem;
-    height: 100%;
     margin-top: 1rem;
 }
 
@@ -110,13 +93,11 @@ main{
 
 .skills-hobbies{
     display: grid;
-    
     gap: 1rem;
 }
 .skills h1{
     font-weight: bold;
     font-size: 1.2rem;
-    line-height: 22px;
     text-transform: uppercase;
     color: #4F4F4F;
 }
@@ -163,10 +144,8 @@ main{
     width: 63%;
 }
 .hobbies h1{
-    font-style: normal;
     font-weight: 500;
     font-size: 1.5rem;
-    line-height: 29px;
     margin: 1rem 0;
     color: #4F4F4F;
 
@@ -177,22 +156,18 @@ main{
 .hobbies h2{
     font-weight: 600;
     font-size: 1.1rem;
-    line-height: 22px;
-    /* identical to box height */
     margin: 1rem 0;
     color: #333333;
     
 
 }
 .hobbies p{
-    line-height: 20px;
     font-size: .9rem;
     color: #828282;
     
 
 }
 .hobbies .item .img{
-    
     height: 139px;
 }
 .blog-experiences{
@@ -200,12 +175,9 @@ main{
     gap: 1rem;
 }
 .blog h1{
-    font-style: normal;
     font-weight: 500;
     font-size: 1rem;
     line-height: 20px;
-    /* identical to box height */
-
     color: #E0E0E0;
 
 }
@@ -215,7 +187,6 @@ main{
     font-weight: 500;
     font-size: 1.3rem;
     line-height: 29px;
-
     color: #333333;
 
 }
@@ -234,12 +205,9 @@ main{
     font-weight: 500;
     font-size: 1rem;
     line-height: 20px;
-    /* identical to box height */
-
     color: #2F80ED;
 }
 .experiences h1{
-    font-style: normal;
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 29px;
@@ -267,8 +235,6 @@ main{
 .experiences .item .post{
     font-weight: 600;
     line-height: 20px;
-    /* identical to box height */
-    
     color: #333333;;
 }
 .experiences .item .description{
@@ -280,23 +246,18 @@ main{
 .projects{
     display: grid;
     gap: 1rem;
-    
-
 }
 .projects h1{
-    font-style: normal;
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 22px;
-    /* identical to box height */
-
     color: #4F4F4F;
 
 }
 .projects .filter-container{
     display: grid;
-    
     gap: 1rem;
+
 }
 .projects .filter-container .filter{
     border: 1px solid #4F4F4F;
@@ -324,7 +285,6 @@ main{
 .project .hashtag{
     font-weight: 500;
     line-height: 20px;
-    /* identical to box height */
     margin: 1rem 0;
     color: #4F4F4F;
 
@@ -334,7 +294,6 @@ main{
     font-weight: 500;
     font-size: 1.4rem;
     line-height: 29px;
-
     color: #333333;
 }
 .project .description{
@@ -396,37 +355,53 @@ main{
         transform: translateY(0);
     }
 }
-@media all and (min-width : 800px){
-    main{
-        grid-template-columns: 1fr 2fr;
-        
-    }
-    
-    .projects{
-        grid-column: 1 / span 2;
-
-    }
-    
-    .projects .filter-container{
-        padding-right: 60%;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 1rem;
-    }
-    .projects-container{
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-   
-}
 
 footer{
-    margin: 4rem auto 0 auto;
+    margin: 1rem auto -1rem auto;
     text-align: center;
     font-size: .8rem;
-    width: 70%;
-    
+   
 }
 footer a{
     text-decoration: none;
     color: inherit;
     font-weight: bold;
+}
+
+@media all and (min-width:768px){
+    header{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 1.5rem;
+    }
+    header .img{
+        margin-bottom: 0; 
+      
+    }
+    header .name,
+    header .post{
+        padding-top: 0;
+    }
+    @media all and (min-width:800px){
+        main{
+            grid-template-columns: 1fr 2fr;
+            
+        }
+        
+        .projects{
+            grid-column: 1 / span 2;
+            
+    
+        }
+        
+        .projects .filter-container{
+          
+            grid-template-columns: auto auto auto 1fr;
+            gap: 1rem;
+        }
+        .projects-container{
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+       
+    }
 }
